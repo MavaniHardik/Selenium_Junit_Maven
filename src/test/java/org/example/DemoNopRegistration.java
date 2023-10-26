@@ -22,6 +22,7 @@ public class DemoNopRegistration {
         driver.manage().window().maximize();
         driver.get("https://demo.nopcommerce.com/");
         driver.findElement(By.className("ico-register")).click();
+
         Thread.sleep(2000);
         driver.findElement(By.id("gender-male")).click();
         driver.findElement(By.id("FirstName")).sendKeys("katik");
@@ -48,6 +49,17 @@ public class DemoNopRegistration {
 //        driver.findElement(By.id("register-button")).click();
         Thread.sleep(2000);
 //        driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div[2]/div[2]/a")).click();
+
+        driver.findElement(By.name("Gender")).click();
+        driver.findElement(By.id("FirstName")).sendKeys("katik");
+        driver.findElement(By.id("LastName")).sendKeys("kk");
+        driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div[2]/form/div[1]/div[2]/div[5]/input")).sendKeys("kartik.kk@gmail.com");
+        driver.findElement(By.id("Company")).sendKeys("Kaka company ");
+        driver.findElement(By.id("Password")).sendKeys("Kaka@123456");
+        driver.findElement(By.id("ConfirmPassword")).sendKeys("Kaka@123456");
+        driver.findElement(By.id("register-button")).click();
+        driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div[2]/div[2]/a")).click();
+
 
 
                 Thread.sleep(4000);
