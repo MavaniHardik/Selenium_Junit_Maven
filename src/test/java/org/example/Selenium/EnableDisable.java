@@ -36,13 +36,20 @@ public void EnableTest() throws InterruptedException {
     System.out.println(baseurl);
     assertEquals(baseurl,myActualURL);   //This method is compare the URL
 
+
+
 }
     @Test
     public void disableTest() throws InterruptedException {
         driver.findElement(By.id("disabled-button")).click();
+
+
       Boolean isTextInputBoxDisable =  driver.findElement(By.id("enabled-example-input")).isEnabled();
-        System.out.println(isTextInputBoxDisable);
-        assertFalse(isTextInputBoxDisable);
+
+        //System.out.println(isTextInputBoxDisable);
+
+        Thread.sleep(2000);
+       assertFalse(isTextInputBoxDisable);
 
         Thread.sleep(2000);
 

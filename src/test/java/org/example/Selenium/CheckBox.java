@@ -20,15 +20,15 @@ public class CheckBox {
         WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.get("https://www.letskodeit.com/practice");
+        driver.get("https://www.letskodeit.com/practice"); // given
     }
 
     @Test
     public void checkBoxTest() throws InterruptedException {
-        driver.findElement(By.id("bmwcheck")).click();
-        Boolean isBMWSelected = driver.findElement(By.id("bmwcheck")).isSelected();
+        driver.findElement(By.id("bmwcheck")).click();  // when
+        Boolean isBMWSelected = driver.findElement(By.id("bmwcheck")).isSelected(); //and
         System.out.println(isBMWSelected);
-        assertTrue(isBMWSelected);
+        assertTrue(isBMWSelected); //then
         Thread.sleep(2000);
         driver.findElement(By.id("benzcheck")).click();
         Boolean isBENZSelected =driver.findElement(By.id("benzcheck")).isSelected();
