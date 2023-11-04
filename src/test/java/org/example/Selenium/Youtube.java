@@ -31,17 +31,12 @@ public class Youtube {
         driver.findElement(By.xpath("//input[@id=\"search\"]")).sendKeys("Udja kale kava");
         driver.findElement(By.id("search-icon-legacy")).click();
 
-
       Thread.sleep(5000);
-        driver.findElement(By.xpath("//a[@title=\"Udd Jaa Kaale Kaava | Gadar 2 | Sunny Deol, Ameesha | Mithoon, Udit N, Alka Y | Uttam S,Anand Bakshi\"]")).click();
-     //driver.findElement(By.xpath("//a[@title=\"Dhuni Re Dhakhavi |  Sachin-Jigar| Sachin Sanghvi | Nishant Thacker\"]")).click();
+      driver.findElement(By.xpath("//*[@aria-label=\"Udja Kale Kawan | Gadar | Sunny Deol & Ameesha Patel | Alka Yagnik & Udit Narayan | Lyrical by Vaani vaani 2,861,960 views 4 months ago 7 minutes, 33 seconds\"]")).click();
+    }
 
-        Thread.sleep(1000);
-
-    }}
-
-//    @After
-//    public void closeTest() {
-//        driver.close();
-//    }
-//}
+    @After
+    public void closeTest() {
+        driver.close();
+    }
+}
